@@ -274,7 +274,7 @@ span a {
 }
 @media (max-width: 700px) {
     .access-map > img {
-        width: 350px;
+        width: 300px;
     }
     .access-datas {
         display: block;
