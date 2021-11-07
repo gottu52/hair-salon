@@ -1,0 +1,308 @@
+/* common */
+html {
+    margin:0;
+    background:black;
+    color:white;
+    scroll-behavior:smooth;
+}
+body {
+    margin:0;
+}
+ul {
+    list-style:none;
+}
+a {
+    color:white;
+    text-decoration:none;
+}
+.anchor {
+    margin-bottom:240px;
+}
+/* top */
+#top {
+    background: black;
+}
+/* logo-container */
+#logo-container {
+    width:80%;
+    margin:0 auto;
+    height:100px;
+}
+#logo-container > img {
+    height:100%;
+}
+/* carousel */
+#carousel-container {
+    width:80%;
+    max-height: 750px;
+    margin:0 auto;
+}
+#carousel-images {
+    width:80%;
+    max-height: 450px;
+    margin:0 auto;
+    text-align:center;
+}
+.carousel-image {
+    width:100%;
+    max-height: 450px;
+}
+.carousel-view > img{
+    width:100%;
+    max-height: 180px;
+} 
+/* header */
+.header-container {
+    width:100%;
+    height:100px;
+    border:4px solid white;
+    border-right:none;
+    border-left:none;
+    background:black;
+}
+.header-container.fixed {
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1;
+}
+#header-contents {
+    display:flex;
+    width:100%;
+    padding:0;
+}
+.header-content {
+    width:25%;
+    text-align:center;
+    padding-top:20px;
+}
+.header-content#signUp-btn {
+    padding-top:20px;
+}
+#signUp-btn > a {
+    max-width: 150px;
+    padding: 20px;
+    background:pink;
+    border-radius:10px;
+    color:black;
+}
+#signUp-btn:hover > a {
+    background:rgb(241, 224, 227);
+    color:gray;
+    cursor:pointer;
+}
+/* main */
+main {
+    width:80%;
+    margin:100px auto;
+}
+main::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("../images/background-logo.png") no-repeat;
+    background-size: contain;
+    content: "";
+    z-index: -1;
+}
+.main-container {
+    display:flex;
+    margin-top:100px;
+}
+.fadeIn {
+    transition:1.5s;
+    opacity:0;
+}
+.fadeIn.animated {
+    opacity:1;
+}
+.main-contents {
+    width:30%;
+    margin:0 10%;
+}
+.main-image {
+    width:40%;
+}
+.main-image > img {
+    width:100%;
+}
+.responsive {
+    display: none;
+}
+@media (max-width: 700px) {
+    .main-container {
+        display: block;
+    }
+    .main-contents {
+        width: 90%;
+        margin: auto;
+    }
+    .main-image {
+        width: 80%;
+        margin: auto;
+    }
+    .default {
+        display: none;
+    }
+    .responsive {
+        display: block;
+    }
+    main::before {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: url("../images/background-logo-responsive.png") no-repeat;
+        background-size: contain;
+        content: "";
+        z-index: -1;
+    }
+}
+/* price */
+#price {
+    margin-top:100px;
+}
+#price-border {
+    border:2px solid white;
+    padding-bottom:20px;
+    margin-bottom:100px;
+}
+#price-title {
+    text-align:center;
+    font-size:30px;
+}
+#price-title > h1 {
+    margin:0;
+}
+#price-container {
+    display:flex;
+    width:100%;
+    margin:0 auto;
+}
+.price-contents {
+    margin:0;
+    padding:0;
+    width:33%;
+    text-align:center;
+}
+.price-content {
+    font-size:30px;
+    font-weight:bold;
+}
+.red {
+    color:red;
+}
+@media (max-width: 700px) {
+    #price-title {
+        font-size: 25px;
+    }
+    .price-content {
+        font-size: 15px;
+    }
+    span {
+        display: none;
+    }
+}
+/* access */
+#map-image {
+    width:60%;
+    height:300px;
+    margin:0 auto;
+}
+#map-image > img{
+    width:100%;
+    height:100%
+
+}
+#access-contents {
+    display:flex;
+    flex-wrap:wrap;
+    width:100%;
+}
+.access-content {
+    width:50%;
+    text-align:center;
+    margin-top:20px;
+}
+@media (max-width: 700px) {
+    #map-image {
+        height: 200px;
+    }
+    #access-contents {
+        display: block;
+    }
+    .access-content {
+        width: 80%;
+    }
+}
+/* footer */
+footer {
+    height:100px;
+    text-align:center;
+    background:white;
+    color:black;
+}
+footer > p {
+   padding:36px 0;
+}
+
+
+/* signUp-page */
+#signUp-title {
+    text-align:center;
+    border-bottom:4px solid white;
+    font-size:20px;
+}
+#input-container {
+    margin-top:50px;
+    display:flex;
+}
+.input-contents {
+    width:50%;
+    font-size:20px;
+}
+#input-name {
+    text-align:right;
+    margin-right:20px;
+}
+#address-text {
+    width:300px;
+}
+#submit {
+    margin-top:20px;
+    text-align:center;
+}
+.btn {
+    font-size:20px;
+    border-radius:10px;
+    padding:10px 20px;
+    background:white;
+    color:black;
+    cursor:pointer;
+}
+.btn:hover {
+    background:gray;
+    color:rgb(88, 86, 86);
+}
+#back {
+    text-align:right;
+    margin:100px 20px 0 auto;
+}
+#back > a {
+    border-bottom:1px solid white;
+}
+#back > a:hover {
+    color:gray;
+}
+
+
+/* signUp-result */
+#signUp-result {
+    text-align:center;
+    margin:140px 0 200px;
+    font-size: 30px;
+}

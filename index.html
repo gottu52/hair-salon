@@ -4,153 +4,165 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hair Salon</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ress.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <title>Gold Gym</title>
 </head>
 <body>
-    <!-- header -->
-    <header>
-        <div class="header-container">
-            <img class="header-logo" src="./img/hairSalon-logo.png">
-            <div class="list-container">
-                <ul class="header-lists">
-                    <li><a href="#service" class="header-list">Service</a></li>
-                    <li><a href="#menu" class="header-list">Menu</a></li>
-                    <li><a href="#price" class="header-list">Price</a></li>
-                    <li id="right-list"><a href="#access" class="header-list">Access</a></li>
-                </ul>
-                 <a href="" id="reservation">Webで予約</a>
-            </div>
-        </div>
-    </header>
 
-    <div class="background-container">
-        <!-- crousel -->
-        <section class="carousel">
-                <div class="carousel-container">
-                    <ul id="carouselImages">
-                        <li class="carousel-image"><img src="https://source.unsplash.com/ewpTmN9pQJM"></li>
-                        <li class="carousel-image"><img src="https://source.unsplash.com/35NAaB_Nmx8"></li>
-                        <li class="carousel-image"><img src="https://source.unsplash.com/Kx8DDqb6Wbw"></li>
-                    </ul>
-                    <button id="prev">&laquo</button>
-                    <button id="next">&raquo</button>
-                </div>
-                <nav>
-                </nav>
+    <div id="top">
+        <!-- logo -->
+        <section id="logo-container">
+            <img id="logo" src="./images/GOLD-GYM-logo.png">
         </section>
-        <!-- service -->
-        <div class="container">
-            <div id="service">
-                <h1>Service</h1>
-                <p>
-                    超一流かつ最先端の技術による最高のサービスをお届けします。
-                    <br>店舗は都内のターミナル駅から徒歩5分の立地に展開しております。
-                    <br>リーズナブルな料金でサービスをご提供しており、どなたでも気軽にご来店していただけます。
-                </p>
+        <!-- carousel -->
+        <section id="carousel">
+            <div id="carousel-container">
+                <!-- <ul id="carousel-images"> -->
+                <ul class="slider" id="carousel-images">
+                    <li><img class="carousel-image" src="./images/new-join-campaign.png"></li>
+                    <li><img class="carousel-image" src="./images/introduce-campaign.png"></li>
+                    <li><img class="carousel-image" src="./images/swimming-lesson.png"></li>
+                    <li><img class="carousel-image" src="./images/Night-Boxing.png"></li>
+                    <li><img class="carousel-image" src="./images/dance-lesson.png"></li>
+                    <li><img class="carousel-image" src="./images/remort-fitness.png"></li>
+                </ul>
+                <ul class="thumbnail" id="carousel-views">
+                    <li class="carousel-view"><img src="./images/new-join-campaign.png"></li>
+                    <li class="carousel-view"><img src="./images/introduce-campaign.png"></li>
+                    <li class="carousel-view"><img src="./images/swimming-lesson.png"></li>
+                    <li class="carousel-view"><img src="./images/Night-Boxing.png"></li>
+                    <li class="carousel-view"><img src="./images/dance-lesson.png"></li>
+                    <li class="carousel-view"><img src="./images/remort-fitness.png"></li>
+                </ul>
+            </div>
+        </section>
+        <!-- header -->
+        <header>
+            <div class="header-container">
+                <ul id="header-contents">
+                    <li class="header-content animation"><a href="#logo-container">campaign</a></li>
+                    <li class="header-content animation"><a href="#price-anchor">price</a></li>
+                    <li class="header-content animation"><a href="#access-anchor">access</a></li>
+                    <li class="header-content" id="signUp-btn"><a href="./signUp-page.html">会員登録</a></li>
+                </ul>
+            </div>
+            </div>
+        </header>
+    </div>  
+    
+    <!-- main -->
+    <main>
+        <!-- facility -->
+        <div id="facility">
+            <div class="main-container fadeIn">
+                <div class="main-contents">
+                    <h1>充実した設備</h1>
+                    <p>トレーニング用マシーンはもちろん、プールやサウナ、マッサージなど、これ以上ないほど充実した設備の数々</p>
+                </div>
+                <div class="main-image">
+                    <img src="./images/facility.png">
+                </div>
             </div>
         </div>
-        <!-- menu -->
-        <div class="container">
-            <div id="menu">
-                <h1>Hair Styles</h1>
-                <ul id="menu-lists">
-                    <li class="menu-list">
-                        <img class="menu-image" src="https://source.unsplash.com/Xo4YvBp6IBM">
-                        <p class="menu-title">Lady Long</p>
-                    </li>
-                    <li class="menu-list">  
-                        <img class="menu-image" src="https://source.unsplash.com/Xo4YvBp6IBM">
-                        <p class="menu-title">Lady Short</p>
-                    </li>
-                    <li class="menu-list">
-                        <img class="menu-image" src="https://source.unsplash.com/Xo4YvBp6IBM">
-                        <p class="menu-title">Men VeryShort</p>
-                    </li>
-                    <li class="menu-list">
-                        <img class="menu-image" src="https://source.unsplash.com/Xo4YvBp6IBM">
-                        <p class="menu-title">Men Parm</p>
-                    </li>
-                </ul>
+        <!-- machine default -->
+        <div class="default" id="machine">
+            <div class="main-container fadeIn">
+                <div class="main-image">
+                    <img src="./images/machine.png">
+                </div>
+                <div class="main-contents">
+                    <h1>最先端のマシーン</h1>
+                    <p>最先端の高性能マシーンが、あなたの自己研鑽をサポート</p>
+                </div>
+            </div>
+        </div>
+        <!-- machine responsive -->
+        <div class="responsive" id="machine">
+            <div class="main-container fadeIn">
+                <div class="main-contents">
+                    <h1>最先端のマシーン</h1>
+                    <p>最先端の高性能マシーンが、あなたの自己研鑽をサポート</p>
+                </div>
+                <div class="main-image">
+                    <img src="./images/machine.png">
+                </div>
+            </div>
+        </div>
+        <!-- instracter -->
+        <div id="instracter">
+            <div class="main-container fadeIn">
+                <div class="main-contents">
+                    <h1>優秀なインストラクター</h1>
+                    <p>優れたインストラクターが、マンツーマンであなたをさらなる高みへ</p>
+                </div>
+                <div class="main-image">
+                    <img src="./images/instructer.png">
+                </div>
             </div>
         </div>
         <!-- price -->
-        <div class="container">
-            <div id="price">
-                <h1>Price</h1>
-                <div class="plan-container">
-                    <ul class="plan-title">
-                        <li class="plan-title data">Cut Hair</li>
-                        <li class="plan-title data">Parm</li>
-                        <li class="plan-title data">Dye Hair</li>
+        <div id="price-anchor" class="anchor"></div>
+        <div id="price" class="fadeIn">
+            <div id="price-border">
+                <div id="price-title">
+                    <h1>Price</h1>
+                    <h3>セール中！</h3>
+                </div>
+                <div id="price-container">
+                    <ul class="price-contents" id="price-targets">
+                        <li class="price-content">成人</li>
+                        <li class="price-content">学生</li>
                     </ul>
-                    <ul class="plan-price">
-                        <li class="plan-price data wrap1">￥3,000</li>
-                        <li class="plan-price data wrap2">￥3,000</li>
-                        <li class="plan-price data wrap1">￥3,000</li>
+                    <ul class="price-contents">
+                        <li class="price-content">通常6000円/月　<span>→</span></li>
+                        <li class="price-content">通常5000円/月　<span>→</span></li>
+                    </ul>
+                    <ul class="price-contents" id="price-after">
+                        <li class="price-content red">5000円/月!!</li>
+                        <li class="price-content red">4000円/月!!</li>
                     </ul>
                 </div>
             </div>
         </div>
         <!-- access -->
-        <div class="container">
-            <div id="access">
-                <h1>Access</h1>
-                <div class="access-map">
-                    <img src="https://source.unsplash.com/AxT4iYcoI2M/">
+        <div id="access-anchor" class="anchor"></div>
+        <div id="access" class="fadeIn">
+            <span id="access-anchor"></span>
+             <div id="access-container">
+                <div id="map-image">
+                    <img src="./images/damy-map.png">
                 </div>
-                <div class="access-datas">
-                    <div class="access-data">
-                        <div class="access-title">
-                            <h2>住所</h2>
-                        </div>
-                        <div class="access-text">
-                            <p>〒111-1111東京都東京市東京区1-1-1</p>
-                        </div>
-                    </div>
-                    <div class="access-data">
-                        <div class="access-title">
-                            <h2>アクセス</h2>
-                        </div>
-                        <div class="access-text">
-                            <p>東京〇〇駅から徒歩５分</p>
-                        </div>
-                    </div>
-                    <div class="access-data">
-                        <div class="access-title">
-                            <h2>営業時間</h2>
-                        </div>
-                        <div class="access-text">
-                            <p>AM 8:00 ~ 12:00
-                                <br>PM 13:00 ~ 20:00
-                            </p>
-                        </div>
-                    </div>
-                    <div class="access-data">
-                        <div class="access-title">
-                            <h2>定休日</h2>
-                        </div>
-                        <div class="access-text">
-                            <p>火曜日、祝日</p>
-                        </div>
-                    </div>
-                    <div class="access-data">
-                        <div class="access-title">
-                            <h2>電話番号</h2>
-                        </div>
-                        <div class="access-text">
-                            <p>123-456-7890</p>
-                        </div>
-                    </div>
-                </div>   
+                <ul id="access-contents">
+                    <li class="access-content">
+                        <h3>住所</h3>
+                        <p>なんとか県なんとか市なんとか区0-0-0</p>
+                    </li>
+                    <li class="access-content">
+                        <h3>電話番号</h3>
+                        <p>000-0000-0000</p>
+                    </li>
+                    <li class="access-content">
+                        <h3>アクセス</h3>
+                        <p>ほにゃらら駅から徒歩5分</p>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
-    
+    </main>
+
     <!-- footer -->
     <footer>
-        <p>(c)2021 hair-salon</p>
+        <p>(c)2021 gold-gym</p>
     </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
+  
