@@ -73,9 +73,12 @@ a#reservation:hover {
 }
 
 /* background */
-div.background-container {
+div.background-container::before {
     background-image:url(https://source.unsplash.com/3Eagf8RTqPc);
-    background-attachment:fixed;
+    z-index: -1;
+    content: "";
+    display: block;
+    position:fixed;
     background-size:cover;
 }
 
@@ -270,6 +273,8 @@ span a {
 .access-data {
     width:50%;
     text-align:center;
+}
+.access-text {
     color: black;
 }
 @media (max-width: 700px) {
