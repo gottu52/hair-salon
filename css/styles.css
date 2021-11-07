@@ -2,6 +2,9 @@
 body {
     margin:0;
 }
+h1 {
+    border-bottom : 1px solid black;
+}
 .container {
     opacity:0;
     transition:opacity 1.5s;
@@ -59,7 +62,7 @@ a#reservation {
 a#reservation:hover {
     background:rgb(228, 144, 144);
 }
-@media (max-width: 620px) {
+@media (max-width: 700px) {
     .header-lists {
         display: none;
     }
@@ -144,6 +147,8 @@ button.current {
 /* service */
 #service {
     margin-top:100px;
+    margin: auto;
+    width: 80%;
 }
 #service > h1 {
     text-align:center;
@@ -158,7 +163,7 @@ span a {
     color:red;
 }
 
-/* menu */
+/* menu  */
 #menu {
     width:80%;
     margin:0 auto;
@@ -167,40 +172,35 @@ span a {
 #menu > h1 {
     text-align:center;
 }
-.access-map > img {
-    border:1px solid black;
-}
-ul.menu-list {
+#menu-lists {
     display:flex;
     text-align:center;
-    padding:0;
-    margin-top:40px;
+    margin-top: 40px;
+    padding: 0;
+    width: 100%;
 }
-li.menu-image {
-    width:25%;
+.menu-list {
+    width: 25%;
+    padding: 3%;
 }
-li.menu-image img{
-    width:60%;
+.menu-image {
+    width: 100%;
 }
-ul.menu-titles {
-    display:flex;
-    text-align:center;
-    padding:0;
+.menu-title {
+    font-weight: bold;
+    font-size: 20px;
 }
-li.menu-title {
-    width:25%;
-    font-weight:bold;
-}
-div.to-menuPage {
-   margin:50px auto;
-   width:100%;
-   height:50px;
-   text-align:center;
-}
-div.to-menuPage  > a {
-    color:black;
-    font-size:25px;
-    border-bottom:1px solid black;
+@media (max-width: 700px) {
+    #menu {
+        width: 60%;
+    }
+    #menu-lists {
+        display: block;
+    }
+    .menu-list {
+        width: 100%;
+        margin: 50px 0;
+    }
 }
 
 /* Price */
@@ -231,6 +231,14 @@ div.to-menuPage  > a {
     margin:0 auto;
     padding-bottom:30px;
 }
+@media (max-width: 550px) {
+    .wrap1 {
+        padding-top: 20px;
+    }
+    .wrap2 {
+        padding-top: 10px;
+    }
+}
 
 
 /* Access */
@@ -249,6 +257,7 @@ div.to-menuPage  > a {
 .access-map > img {
     width: 400px;
     height:250px;
+    border:1px solid black;
 }
 .access-datas {
     display:flex;
@@ -257,6 +266,15 @@ div.to-menuPage  > a {
 .access-data {
     width:50%;
     text-align:center;
+}
+@media (max-width: 700px) {
+    .access-datas {
+        display: block;
+    }
+    .access-data {
+        width: 100%;
+        margin: 50px 0;
+    }
 }
 
 /* footer */
