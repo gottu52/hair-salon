@@ -1,65 +1,90 @@
+'use strict'
+
 // carousel
-$(function() {
-  $('.slider').slick({
-    autoplay:true,
-    autoplaySpeed:3000,
-    fade:true,
-    asNavFor:'.thumbnail',
-  });
-  $('.thumbnail').slick({
-    infinite:true,
-    slidesToShow:3,
-    slidesToScroll:1,
-    asNavFor:'.slider',
-    focusOnSelect:true,
-    arrows:false,
-  })
-});
+{
+    const next = document.getElementById('next');
+    const prev = document.getElementById('prev');
+    const ul = document.getElementById('carouselImages');
+    const slides = ul.children;
+    let currentIndex = 0;
+    const dots = [];
 
-// fadeIn
-$(window).on('load scroll', function() {
-  var box = $('.fadeIn');
-  var animated = 'animated';
-
-  box.each(function() {
-    var boxOffset = $(this).offset().top;
-    var scrollTop = $(window).scrollTop();
-    var windowHeight = $(window).height();
-    if(scrollTop > boxOffset - windowHeight + 200) {
-      $(this).addClass(animated);
+    function uppdateButtons() {
+        prev.classList.remove('hidden');
+        next.classList.remove('hidden');
+        
+        if(currentIndex === 0) {
+             prev.classList.add('hidden');
+        }
+        if(currentIndex === slides.length - 1) {
+             next.classList.add('hidden');
+        }
     }
-  }); 
-});
 
-// header-link scroll
-$(function() {
-  var $head = $('.header-container'),
-      fixed = 'fixed',
-      $win = $(window),
-      headPos = $head.offset().top;
-
-  $win.on('load scroll', function() {
-    var scrollTop = $(this).scrollTop();
-    if( scrollTop > headPos ) {
-      $head.addClass(fixed);
-    } else {
-      $head.removeClass(fixed);
+    function slideMove() {
+        uppdateButtons();
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        ul.style.transform = `translateX(${-1 * slideWidth * currentIndex}px)`;
     }
-  });
-});
 
-// signUp-page
-$(function() {
-  var $btn = $('.btn'),
-      $val = $('.input-text').val();
-
-  $btn.click(function() {
-    if($('.input-text').val() === '') {
-      alert("必要項目を入力してください");
-      return false;
+    function dotsMove() {
+        dots.forEach (dot => {
+           dot.classList.remove('current');
+        });
+        dots[currentIndex].classList.add('current');
     }
-  });
-});
+
+    function setupDots() {
+        for (let i = 0; i < slides.length; i++) {
+            const dot = document.createElement('button');
+            dot.addEventListener('click', () => {
+                currentIndex = i;
+                dotsMove();
+                uppdateButtons();
+                slideMove
+            });
+            dots.push(dot);
+            document.querySelector('nav').appendChild(dot);
+        }
+        dots[0].classList.add('current');
+    }
+
+    uppdateButtons();
+    setupDots();
+
+    next.addEventListener('click', () => {
+        currentIndex++;
+        slideMove();
+        dotsMove();
+    });
+    prev.addEventListener('click', () => {
+        currentIndex--;
+        slideMove();
+    });
 
 
+}
 
+// appear
+{
+    function callback(entries, obs) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                return;
+            }
+            entry.target.classList.add('appear');
+            obs.unobserve(entry.target);
+        });
+    }
+    const options = {
+        threshold:0.3,
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+
+    const targets = document.querySelectorAll('.container');      
+
+    targets.forEach(target => {
+        observer.observe(target);
+    });
+}
