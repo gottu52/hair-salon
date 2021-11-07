@@ -75,10 +75,13 @@ a#reservation:hover {
 /* background */
 div.background-container::before {
     background-image:url(https://source.unsplash.com/3Eagf8RTqPc);
-    z-index: -1;
-    content: "";
-    display: block;
     position:fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    content:"";
     background-size:cover;
 }
 
